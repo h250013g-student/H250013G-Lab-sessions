@@ -5,7 +5,7 @@ public class Person {
 
     public static void main(String[] args){
 
-//       creating the address
+//      creating the address
 
         Address ad1 = new Address();
         ad1.city ="Bulawayo";
