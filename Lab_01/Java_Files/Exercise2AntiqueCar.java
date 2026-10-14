@@ -1,6 +1,6 @@
 import java.time.Year;
 
-class Car {
+class AntiqueCar {
     String brand;
     int year;
 
@@ -12,7 +12,7 @@ class Car {
 
 public class Exercise2AntiqueCar {
     public static void main(String[] args) {
-        Car car = new Car();
+        AntiqueCar car = new AntiqueCar();
         car.brand = "Toyota";
         car.year = 1998;
         System.out.println(car.brand + " antique? " + car.isAntique());
