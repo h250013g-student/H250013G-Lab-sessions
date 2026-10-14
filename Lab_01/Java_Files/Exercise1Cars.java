@@ -3,12 +3,6 @@ class Car {
     int year;
     double mileage;
 
-    Car(String brand, int year, double mileage) {
-        this.brand = brand;
-        this.year = year;
-        this.mileage = mileage;
-    }
-
     void display() {
         System.out.println(brand + " " + year + " mileage: " + mileage);
     }
@@ -16,15 +10,27 @@ class Car {
 
 public class Exercise1Cars {
     public static void main(String[] args) {
-        Car[] cars = {
-            new Car("Toyota", 2018, 65000),
-            new Car("Honda", 2020, 42000),
-            new Car("Mazda", 2015, 88000)
-        };
+     
+           Car car1 = new Car();
+           car1.brand = "Toyota";
+           car1.year = 2018;
+           car1.mileage = 65000;
+
+            Car car2 = new Car();
+            car2.brand = "Honda";
+            car2.year = 2020;
+            car2.mileage = 42000;
+            
+            Car car3 = new Car();
+            car3.brand = "Mazda";
+            car3.year = 2015;
+            car3.mileage = 88000;
 
         // Display each car using its own details.
-        for (Car car : cars) {
-            car.display();
-        }
+        
+            car1.display();
+            car2.display();
+            car3.display();
+        
     }
 }
