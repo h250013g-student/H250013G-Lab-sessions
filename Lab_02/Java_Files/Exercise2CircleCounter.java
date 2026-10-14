@@ -1,11 +1,23 @@
-public class Exercise2CircleCounter {
-    static class Circle {
-        private static int count = 0; double radius;
-        Circle(double radius) { this.radius = radius; count++; }
-        static int getCount() { return count; }
+class CountedCircle {
+    private static int count = 0;
+    double radius;
+
+    CountedCircle(double radius) {
+        this.radius = radius;
+        count++;
     }
+
+    static int getCount() {
+        return count;
+    }
+}
+
+public class Exercise2CircleCounter {
     public static void main(String[] args) {
-        new Circle(1); new Circle(2); new Circle(3);
-        System.out.println("Circles created: " + Circle.getCount());
+        new CountedCircle(1);
+        new CountedCircle(2);
+        new CountedCircle(3);
+        // The shared counter tracks all constructed circles.
+        System.out.println("Circles created: " + CountedCircle.getCount());
     }
 }

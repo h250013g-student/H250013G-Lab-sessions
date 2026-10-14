@@ -1,7 +1,36 @@
+class SoundAnimal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Cat extends SoundAnimal {
+    @Override
+    void sound() {
+        System.out.println("Meow");
+    }
+}
+
+class Cow extends SoundAnimal {
+    @Override
+    void sound() {
+        System.out.println("Moo");
+    }
+}
+
+class Duck extends SoundAnimal {
+    @Override
+    void sound() {
+        System.out.println("Quack");
+    }
+}
+
 public class Exercise2AnimalSounds {
-    static class Animal { void sound() { System.out.println("Animal sound"); } }
-    static class Cat extends Animal { @Override void sound() { System.out.println("Meow"); } }
-    static class Cow extends Animal { @Override void sound() { System.out.println("Moo"); } }
-    static class Duck extends Animal { @Override void sound() { System.out.println("Quack"); } }
-    public static void main(String[] args) { Animal[] animals = {new Cat(), new Cow(), new Duck()}; for (Animal a : animals) a.sound(); }
+    public static void main(String[] args) {
+        SoundAnimal[] animals = {new Cat(), new Cow(), new Duck()};
+        // The overridden sound method depends on each object's type.
+        for (SoundAnimal animal : animals) {
+            animal.sound();
+        }
+    }
 }

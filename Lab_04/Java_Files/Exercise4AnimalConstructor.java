@@ -1,7 +1,20 @@
-public class Exercise4AnimalConstructor {
-    static class Animal { String name; Animal(String name) { this.name = name; } }
-    static class Dog extends Animal {
-        Dog(String name) { super(name); } // EXPLAIN: required because Animal has no no-argument constructor.
+class ConstructorAnimal {
+    String name;
+
+    ConstructorAnimal(String name) {
+        this.name = name;
     }
-    public static void main(String[] args) { System.out.println(new Dog("Buddy").name); }
+}
+
+class Dog extends ConstructorAnimal {
+    Dog(String name) {
+        // Pass the required name to the superclass constructor.
+        super(name);
+    }
+}
+
+public class Exercise4AnimalConstructor {
+    public static void main(String[] args) {
+        System.out.println(new Dog("Buddy").name);
+    }
 }
