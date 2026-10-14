@@ -1,29 +1,12 @@
-class Car {
-    String brand;
-    int year;
-    double mileage;
-
-    void display() {
-        System.out.println(brand + " " + year + " " + mileage + " km");
-    }
-
-    boolean isAntique() {
-        return 2026 - year > 25;
-    }
-}
-
-
 public class Exercise1Cars {
+    // EXPLAIN: fields store each car's data.
+    static class Car {
+        String brand; int year; double mileage;
+        Car(String brand, int year, double mileage) { this.brand = brand; this.year = year; this.mileage = mileage; }
+        void display() { System.out.println(brand + " " + year + " mileage: " + mileage); }
+    }
     public static void main(String[] args) {
-        Car c1 = new Car();
-        c1.brand = "Toyota"; c1.year = 2018; c1.mileage = 65000;
-        Car c2 = new Car();
-        c2.brand = "Honda"; c2.year = 2020; c2.mileage = 42000;
-        Car c3 = new Car();
-        c3.brand = "Mazda"; c3.year = 2015; c3.mileage = 90000;
-
-        c1.display();
-        c2.display();
-        c3.display();
+        Car[] cars = { new Car("Toyota", 2018, 65000), new Car("Honda", 2020, 42000), new Car("Mazda", 2015, 88000) };
+        for (Car car : cars) car.display();
     }
 }

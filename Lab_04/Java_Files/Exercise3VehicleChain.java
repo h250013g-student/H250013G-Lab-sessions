@@ -1,14 +1,6 @@
-class Vehicle {
-    Vehicle() { System.out.println("Vehicle constructor"); }
-}
-class Car extends Vehicle {
-    Car() { System.out.println("Car constructor"); }
-}
-class ElectricCar extends Car {
-    ElectricCar() { System.out.println("ElectricCar constructor"); }
-}
 public class Exercise3VehicleChain {
-    public static void main(String[] args) {
-        new ElectricCar();
-    }
+    static class Vehicle { Vehicle() { System.out.println("Vehicle constructor"); } }
+    static class Car extends Vehicle { Car() { System.out.println("Car constructor"); } }
+    static class ElectricCar extends Car { ElectricCar() { System.out.println("ElectricCar constructor"); } }
+    public static void main(String[] args) { new ElectricCar(); }
 }

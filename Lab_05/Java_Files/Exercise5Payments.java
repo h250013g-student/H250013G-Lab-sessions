@@ -1,17 +1,11 @@
-interface Payment { void process(); }
-class CardPayment implements Payment {
-    public void process() { System.out.println("Card payment processed"); }
-}
-class MobileMoneyPayment implements Payment {
-    public void process() { System.out.println("Mobile money payment processed"); }
-}
-class PaymentProcessor {
-    void pay(Payment payment) { payment.process(); }
-}
 public class Exercise5Payments {
-    public static void main(String[] args) {
-        PaymentProcessor processor = new PaymentProcessor();
-        processor.pay(new CardPayment());
-        processor.pay(new MobileMoneyPayment());
+    interface Payment { void process(); }
+    static class CardPayment implements Payment { public void process(){System.out.println("Card payment processed");} }
+    static class MobileMoneyPayment implements Payment { public void process(){System.out.println("Mobile money payment processed");} }
+    static class PaymentProcessor {
+        void pay(Payment p) { // EXPLAIN: polymorphism avoids type checks.
+            p.process();
+        }
     }
+    public static void main(String[] args) { PaymentProcessor processor=new PaymentProcessor(); processor.pay(new CardPayment()); processor.pay(new MobileMoneyPayment()); }
 }

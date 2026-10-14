@@ -1,12 +1,5 @@
-enum Level { LOW, MEDIUM, HIGH }
 public class Exercise1LevelEnum {
-    public static void main(String[] args) {
-        for (Level level : Level.values()) {
-            switch (level) {
-                case LOW -> System.out.println("LOW: Keep going");
-                case MEDIUM -> System.out.println("MEDIUM: Be careful");
-                case HIGH -> System.out.println("HIGH: Take action");
-            }
-        }
-    }
+    enum Level { LOW, MEDIUM, HIGH }
+    static void advise(Level level) { switch(level) { case LOW -> System.out.println("Keep monitoring"); case MEDIUM -> System.out.println("Take care"); case HIGH -> System.out.println("Act immediately"); } }
+    public static void main(String[] args) { for(Level level:Level.values()) advise(level); }
 }

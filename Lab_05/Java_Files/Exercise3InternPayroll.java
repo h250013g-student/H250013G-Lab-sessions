@@ -1,17 +1,6 @@
-class Employee {
-    String name; double salary;
-    Employee(String name, double salary) { this.name = name; this.salary = salary; }
-    double calculatePay() { return salary; }
-}
-class Intern extends Employee {
-    Intern(String name, double stipend) { super(name, stipend); }
-    @Override double calculatePay() { return salary * 0.8; }
-}
 public class Exercise3InternPayroll {
-    public static void main(String[] args) {
-        Employee[] staff = {new Employee("Tariro", 1000), new Intern("Leslie Sarai", 500)};
-        double total = 0;
-        for (Employee e : staff) total += e.calculatePay();
-        System.out.println("Total payroll: " + total);
-    }
+    static class Employee { String name; double salary; Employee(String n,double s){name=n;salary=s;} double pay(){return salary;} }
+    static class Intern extends Employee { Intern(String n,double stipend){super(n,stipend);} @Override double pay(){return salary;} }
+    static class Manager extends Employee { double bonus; Manager(String n,double s,double b){super(n,s);bonus=b;} @Override double pay(){return salary+bonus;} }
+    public static void main(String[] args) { Employee[] staff={new Employee("Leslie Sarai",500),new Intern("Tariro",250),new Manager("Rudo",1000,200)}; double total=0; for(Employee e:staff) total+=e.pay(); System.out.println("Total payroll: "+total); }
 }
