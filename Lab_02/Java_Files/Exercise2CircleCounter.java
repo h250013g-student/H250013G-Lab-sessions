@@ -6,7 +6,7 @@ class CountedCircle {
         this.radius = radius;
         count++;
     }
-
+    // A static method can be called without an instance of the class.
     static int getCount() {
         return count;
     }

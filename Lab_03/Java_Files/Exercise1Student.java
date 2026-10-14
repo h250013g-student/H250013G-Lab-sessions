@@ -6,7 +6,7 @@ class ValidatedStudent {
         this.name = name;
         setMarks(marks);
     }
-
+    // The setter validates the marks before assigning them.
     void setMarks(int marks) {
         if (marks < 0 || marks > 100) {
             throw new IllegalArgumentException("Marks must be 0 to 100");

@@ -3,21 +3,21 @@ class ConstructorEmployee {
     int employeeId;
     String name;
     String role;
-
+    // The default constructor calls the two-argument constructor.
     ConstructorEmployee() {
         this("Leslie Sarai", "Student Developer");
     }
-
+    // The one-argument constructor calls the two-argument constructor.
     ConstructorEmployee(String name) {
         this(name, "Employee");
     }
-
+    // The two-argument constructor assigns the employee its own ID.
     ConstructorEmployee(String name, String role) {
         this.employeeId = nextId++;
         this.name = name;
         this.role = role;
     }
-
+    // The copy constructor assigns the new employee its own ID.
     ConstructorEmployee(ConstructorEmployee other) {
         this(other.name, other.role);
     }

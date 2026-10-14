@@ -9,15 +9,13 @@ class DefaultCircle {
         this(1.0);
     }
 
-    double area() {
-        return Math.PI * radius * radius;
-    }
 }
 
 public class Exercise1Circle {
     public static void main(String[] args) {
+        // The default constructor is called here.
         System.out.println(new DefaultCircle().radius);
-        // Area is calculated from the circle's radius.
-        System.out.printf("%.2f%n", new DefaultCircle(3).area());
+        // The constructor with a radius argument is called here.
+        System.out.println(new DefaultCircle(2.0).radius);
     }
 }

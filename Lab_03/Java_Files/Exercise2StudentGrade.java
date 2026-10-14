@@ -4,7 +4,7 @@ class GradeStudent {
     GradeStudent(int marks) {
         this.marks = marks;
     }
-
+// The method checks the highest grade threshold first.
     String getGrade() {
         if (marks >= 80) return "A";
         if (marks >= 70) return "B";

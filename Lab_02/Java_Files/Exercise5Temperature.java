@@ -4,15 +4,15 @@ class Temperature {
     private Temperature(double celsius) {
         this.celsius = celsius;
     }
-
+    // Factory methods can be used to create instances from different units.
     static Temperature fromCelsius(double celsius) {
         return new Temperature(celsius);
     }
-
+    // Factory methods can be used to create instances from different units.
     static Temperature fromFahrenheit(double fahrenheit) {
         return new Temperature((fahrenheit - 32) * 5 / 9);
     }
-
+// The internal value is always stored in Celsius.
     double getCelsius() {
         return celsius;
     }
