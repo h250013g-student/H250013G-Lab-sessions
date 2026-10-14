@@ -1,8 +1,11 @@
 public class Exercise5CoinChange {
-    enum Coin {
-        QUARTER(25), DIME(10), NICKEL(5), PENNY(1);
+    private enum Coin {
+        QUARTER(25),
+        DIME(10),
+        NICKEL(5),
+        PENNY(1);
 
-        final int value;
+        private final int value;
 
         Coin(int value) {
             this.value = value;
@@ -11,7 +14,8 @@ public class Exercise5CoinChange {
 
     public static void main(String[] args) {
         int amount = 41;
-        // Use the largest available denomination before moving to smaller coins.
+
+        // Take as many of each denomination as the remaining amount allows.
         for (Coin coin : Coin.values()) {
             int count = amount / coin.value;
             if (count > 0) {
