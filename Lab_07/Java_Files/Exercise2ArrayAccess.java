@@ -1,6 +1,7 @@
 public class Exercise2ArrayAccess {
     static void printElement(int[] values, int index) {
         try {
+            // Attempt to access the array element at the specified index
             System.out.println(values[index]);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid array index");
