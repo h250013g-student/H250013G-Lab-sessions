@@ -1,6 +1,7 @@
 public class Exercise5FinallyReturn {
     static int example() {
         try {
+            // The try block executes and returns a value, but the finally block will execute before the return completes.
             System.out.println("Inside try");
             return 5;
         } finally {
