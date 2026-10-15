@@ -6,6 +6,7 @@ class InvalidAgeException extends Exception {
 
 public class Exercise3InvalidAge {
     static void validateAge(int age) throws InvalidAgeException {
+        // Check if the age is within the valid range
         if (age < 0 || age > 120) {
             throw new InvalidAgeException("Age must be between 0 and 120");
         }
