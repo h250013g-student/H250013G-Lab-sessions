@@ -1,4 +1,4 @@
-# H250013G Lab Sessions
+# H250013G LESLIE SARAI SOFTWARE ENGINEERING OBJECT ORIENTED PROGRAMMING
 
 This repository contains ten Java lab sessions. Each lab includes five exercise
 programs and a Word report with the exercise questions, source code, sample
