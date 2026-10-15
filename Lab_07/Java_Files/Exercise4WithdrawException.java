@@ -12,6 +12,7 @@ class WithdrawalAccount {
     }
 
     void withdraw(double amount) throws InsufficientFundsException {
+        // Check if the withdrawal amount exceeds the current balance
         if (amount > balance) {
             throw new InsufficientFundsException("Insufficient funds");
         }
